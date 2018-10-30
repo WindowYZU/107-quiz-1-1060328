@@ -5,6 +5,13 @@
  */
 package lendle.courses.wp.quiz_comboboxandslider;
 
+import java.awt.FlowLayout;
+import javafx.scene.control.Slider;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JSlider;
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author lendle
@@ -104,12 +111,38 @@ public class NewJFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new NewJFrame().setVisible(true);
-            }
-        });
+        JFrame frame=new JFrame();
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setLayout(new FlowLayout());
+        
+        JSlider slider=new JSlider();
+        
+        slider.setMinimum(0);
+        slider.setMaximum(100);
+        slider.setValue(5);
+        slider.setPaintTicks(true);
+        slider.setPaintTrack(true);
+        slider.setPaintLabels(true);
+        slider.setMinorTickSpacing(10);
+        slider.setMajorTickSpacing(20);
+        
+        frame.add(slider);
+        
+        
+        
+        
+        
+        
+        frame.setVisible(true);
+        
+        
+        
+        
+        
+       
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
